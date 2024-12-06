@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: 'ac-control'
+application:
+  mqtt:
+    url: ${mqtt.url}
+    subClientId: mySubClientId
+    pubClientId: myPubClientId
+  device:
+    id:  ${device.id}
+    name:  ${device.name}
+  discovery-topic: 'homeassistant/climate/${application.device.id}/climate/config'
+  ir-remote-control:
+    output-topic: 'zigbee2mqtt/Universal smart IR remote control/set'
+    commands:
+      power:
+        input-topic: 'climate/${application.device.name}/${application.device.id}/power'
+        vendors:
+          Medea:
+            ON: 'on'
+            OFF: 'off'
+      mode:
+        input-topic: 'climate/${application.device.name}/${application.device.id}/mode/set'
+        vendors:
+          Medea:
+            heat: 'heat'
+            cool: 'cool'
+            dry: 'dry'
+            fan_only: 'fan_only'
+            auto: 'auto'
+            'off': 'off'
+      temperature:
+        input-topic: 'climate/${application.device.name}/${application.device.id}/temperature/set'
+        vendors:
+          Medea:
+            20: '20'
+            21: '21'
+            22: '22'
+            23: '23'
+            24: '24'
+            25: '25'
+            26: '26'
+            27: '27'
+            28: '28'
+            29: '29'
+            30: '30'
+      fan:
+        input-topic: 'climate/${application.device.name}/${application.device.id}/fan/set'
+        vendors:
+          Medea:
+            low: 'low'
+            medium: 'medium'
+            high: 'high'
+            auto: 'auto'
+
+
