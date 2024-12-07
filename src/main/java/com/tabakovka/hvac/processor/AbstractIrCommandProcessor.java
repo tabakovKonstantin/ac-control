@@ -1,7 +1,6 @@
 package com.tabakovka.hvac.processor;
 
 import com.tabakovka.hvac.ApplicationProperties;
-import com.tabakovka.hvac.model.IrCommand;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -10,9 +9,8 @@ public abstract class AbstractIrCommandProcessor implements IrCommandProcessor {
     protected final ApplicationProperties properties;
 
     @Override
-    public IrCommand processCommandValue(String commandValue) {
-        var irCode = getCodeByCommandForCurrDevice(commandValue);
-        return new IrCommand(irCode);
+    public String processCommandValue(String commandValue) {
+       return getCodeByCommandForCurrDevice(commandValue);
     }
 
     @Override

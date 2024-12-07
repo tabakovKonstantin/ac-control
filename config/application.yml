@@ -1,3 +1,4 @@
 mqtt.url: tcp://192.168.100.115:1883
 device.id: '0xa5c13813743bd4a2'
-device.name: 'Medea'
+device.name: 'Midea'
+output.topic: 'zigbee2mqtt/Universal smart IR remote control/set/ir_code_to_send'

@@ -40,6 +40,7 @@ To build and run the project, follow these steps:
   -e MQTT_URL=tcp://192.168.100.115:1883 \
   -e DEVICE_ID=0xa5c13813743bd4a2 \
   -e DEVICE_NAME=Medea \
+  -e OUTPUT_TOPIC=zigbee2mqtt/Universal smart IR remote control/set/ir_code_to_send \
   tabakov/ac-control:latest
 `
     #### or

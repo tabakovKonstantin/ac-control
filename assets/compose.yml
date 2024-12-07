@@ -5,4 +5,5 @@ services:
       - MQTT_URL=tcp://192.168.100.115:1883
       - DEVICE_ID=0xa5c13813743bd4a2
       - DEVICE_NAME=Medea
+      - OUTPUT_TOPIC=zigbee2mqtt/Universal smart IR remote control/set/ir_code_to_send
     restart: unless-stopped
