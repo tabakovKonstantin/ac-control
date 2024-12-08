@@ -13,7 +13,7 @@ public class DiscoveryMessageFactory {
 
     public DiscoveryMessage createMessage(String deviceName) {
         return switch (deviceName) {
-            case "Medea" -> new MedeaDiscoveryMessage().createWithDefaults(properties);
+            case "Midea" -> new MedeaDiscoveryMessage().createWithDefaults(properties);
             default -> throw new IllegalArgumentException("Unsupported device: " + deviceName);
         };
     }
